@@ -105,13 +105,17 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     donut.scale.set(scale, scale, scale);
     scene.add(donut);
   }
-  gui.add(text.position, "x").min(-10).max(10).step(0.0001);
-  gui.add(text.position, "y").min(-10).max(10).step(0.0001);
-  gui.add(text.position, "z").min(-10).max(10).step(0.0001);
+  gui.add(text.position, "x").min(-10).max(10).step(0.0001).name("Position X");
+  gui.add(text.position, "y").min(-10).max(10).step(0.0001).name("Position Y");
+  gui.add(text.position, "z").min(-10).max(10).step(0.0001).name("Position Z");
 
-  gui.add(text.scale, "x").min(-10).max(10).step(0.0001);
-  gui.add(text.scale, "y").min(-10).max(10).step(0.0001);
-  gui.add(text.scale, "z").min(-10).max(10).step(0.0001);
+  gui.add(text.scale, "x").min(-10).max(10).step(0.0001).name("Scale X");
+  gui.add(text.scale, "y").min(-10).max(10).step(0.0001).name("Scale Y");
+  gui.add(text.scale, "z").min(-10).max(10).step(0.0001).name("Scale Z");
+
+  gui.add(text.rotation, "x").min(-10).max(10).step(0.0001).name("rotation X");
+  gui.add(text.rotation, "y").min(-10).max(10).step(0.0001).name("rotation Y");
+  gui.add(text.rotation, "z").min(-10).max(10).step(0.0001).name("rotation Z");
 
   console.timeEnd();
 });
